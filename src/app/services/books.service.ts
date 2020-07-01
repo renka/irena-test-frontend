@@ -40,7 +40,7 @@ export class BooksService {
       numberOfBooks: amount,
       userId: 1 };
 
-    this.http.post(this.url + this.booksUrl + '/add', body).subscribe(
+    this.http.post(this.url + this.booksUrl + '/checkout', body).subscribe(
       (response) => console.log(response),
       (error) => console.log(error)
     );

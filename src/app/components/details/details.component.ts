@@ -32,6 +32,6 @@ export class DetailsComponent implements OnInit {
   }
 
   purchase(formInfo) {
-    this.booksService.buyBook(formInfo['amount'], info['id']);
+    this.booksService.buyBook(formInfo['amount'], this.info['id']);
   }
 }

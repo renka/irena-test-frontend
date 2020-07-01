@@ -1,0 +1,16 @@
+<h1>{{info.title}}</h1>
+<form [formGroup]="checkoutForm" (ngSubmit)="purchase(checkoutForm.value)">
+<p>Author: {{info.author}}</p>
+<p>Genre: {{info.genre}}</p>
+<p>Price: {{info.price}}</p>
+<p>Available in storage: {{info.amountAtStorage}}</p>
+
+<div>
+  <label for="amount">
+    Amount
+  </label>
+  <input id="amount" type="number" formControlName="amount">
+</div>
+
+<button class="button" type="submit">Buy</button>
+</form>

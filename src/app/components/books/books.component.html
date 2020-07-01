@@ -1,0 +1,15 @@
+<div>
+  <a routerLink="/add"><button class="btn btn-success pull-right" >Add New</button></a>
+  <h3>Available Books</h3>
+  <div class="row">
+    <div class="col-sm-4" *ngFor="let book of books">
+      <div class="card">
+        <div class="card-body">
+          <h3><a routerLink="{{book.id}}"><img src="assets/book.png">{{book.title}}</a></h3>
+          <div>{{book.author}}</div>
+          <div>{{book.price}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

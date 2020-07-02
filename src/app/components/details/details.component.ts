@@ -25,11 +25,16 @@ export class DetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.bookId = this.route.snapshot.params.id;
-    this.booksService.getBookInfo(this.bookId).subscribe((data) => {
+    this.booksService.getBookInfo(this.bookId).subscribe(
+      data => {
       console.log('INFO: ' );
       console.log( data);
       this.info = data['data'];
-    });
+    },
+      error => {
+        console.log('Error:', error);
+        this.router.navigate(['/error'])
+      });
   }
 
   purchase(amount) {

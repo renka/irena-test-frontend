@@ -1,7 +1,11 @@
-<h3>New book</h3>
 
+<div class = "container">
+  <mat-card class="card">
+    <mat-card-header color = "primary">
+      <mat-card-title>New book</mat-card-title>
+   </mat-card-header>
 
-<form [formGroup]="createForm" (ngSubmit)="saveBook(createForm.value)">
+    <form [formGroup]="createForm" (ngSubmit)="saveBook(createForm.value)">
 
   <div>
     <label for="title">
@@ -38,3 +42,5 @@
   <button class="button" type="submit">Save</button>
 
 </form>
+  </mat-card>
+</div>

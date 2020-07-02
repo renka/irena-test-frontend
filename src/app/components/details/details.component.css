@@ -1,0 +1,22 @@
+.container {
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  max-width: 400px;
+  border-style: solid;
+  border-width: medium;
+}
+
+.header-image {
+  background-image: 'assets/book.png';
+  background-size: cover;
+}
+
+img {
+  height: 200px;
+  width: 200px;
+}

@@ -16,6 +16,7 @@ export class DetailsComponent implements OnInit {
   constructor(
     public formBuilder: FormBuilder,
     private booksService: BooksService,
+    private router: Router,
     private route: ActivatedRoute,
   ) {
     this.checkoutForm = this.formBuilder.group({
@@ -33,5 +34,6 @@ export class DetailsComponent implements OnInit {
 
   purchase(formInfo) {
     this.booksService.buyBook(formInfo['amount'], this.info['id']);
+    this.router.navigate(['/payment']);
   }
 }

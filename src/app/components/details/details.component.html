@@ -1,16 +1,27 @@
-<h1>{{info.title}}</h1>
 <form [formGroup]="checkoutForm" (ngSubmit)="purchase(checkoutForm.value)">
-<p>Author: {{info.author}}</p>
-<p>Genre: {{info.genre}}</p>
-<p>Price: {{info.price}}</p>
-<p>Available in storage: {{info.amountAtStorage}}</p>
-
-<div>
-  <label for="amount">
-    Amount
-  </label>
-  <input id="amount" type="number" formControlName="amount">
+  <div class = "container">
+<mat-card class="card">
+  <mat-card-header color = "primary">
+    <div mat-card-avatar class="header-image"></div>
+    <mat-card-title>{{info.title}}</mat-card-title>
+    <mat-card-subtitle>Author: {{info.author}}</mat-card-subtitle>
+    <mat-card-subtitle>Genre: {{info.genre}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="assets/book.png" alt="Book cover">
+  <mat-card-content>
+     <p>Price: {{info.price}}</p>
+      <p>Available in storage: {{info.amountAtStorage}}</p>
+      <div>
+        <label for="amount">
+          Amount
+        </label>
+        <input id="amount" type="number" formControlName="amount">
+      </div>
+   </mat-card-content>
+  <mat-card-actions>
+    <button mat-button type="submit">BUY</button>
+    <button mat-button routerLink="/books">BACK</button>
+  </mat-card-actions>
+</mat-card>
 </div>
-
-<button class="button" type="submit">Buy</button>
 </form>

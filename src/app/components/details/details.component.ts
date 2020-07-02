@@ -32,8 +32,8 @@ export class DetailsComponent implements OnInit {
     });
   }
 
-  purchase(formInfo) {
-    this.booksService.buyBook(formInfo['amount'], this.info['id']);
+  purchase(amount) {
+    this.booksService.buyBook(amount, this.info['id']);
     this.router.navigate(['/payment']);
   }
 }
